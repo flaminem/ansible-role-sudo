@@ -1,7 +1,7 @@
 ---
 - name: ensure sudo is installed on debian
   apt: pkg=sudo state=installed
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family in ['Debian','Linuxmint']
   tags: ["packages","sudo"]
 
 - name: ensure sudo is installed on redhat
